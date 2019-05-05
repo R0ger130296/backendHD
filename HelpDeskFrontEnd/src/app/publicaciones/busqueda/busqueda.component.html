@@ -1,0 +1,69 @@
+<div class="main-content" >
+  <div class="container-fluid">
+    <div class="card">
+      <div class="card-header card-header-danger">
+        <h4 class="card-title">Persona</h4>
+      </div>
+      <div class="table-responsive">
+        <table class="table table-hover">
+          <thead>
+            <table>
+                <tr>
+                    <th scope="col" class="th-sm">NOMBRES</th>
+                    <th scope="col" class="th-sm">APELLIDOS</th>
+                    <th scope="col" class="th-sm">CÉDULA</th>
+                    <th scope="col" class="th-sm">GENERO</th>
+                    <th scope="col" class="th-sm">ETNIA</th>
+                    <th scope="col" class="th-sm">ESTUDIANTE</th>
+                    <th scope="col" class="th-sm">TELEFONO</th>
+                    <th scope="col" class="th-sm">CELULAR</th>
+                    <th scope="col" class="th-sm">CORREO PERSONAL</th>
+                    <th scope="col" class="th-sm">CORREO ESPE</th>
+                    <th scope="col" class="th-sm">DIRECCION</th>
+                    <th scope="col" class="th-sm">CONTRASEÑA</th>
+                    <th scope="col" class="th-sm">ACCIONES</th>
+                  </tr>
+            </table>
+          </thead>
+          <tbody>
+            <table *ngIf="personaData">
+                <tr>
+                    <td>{{personaData.nombre}}</td>
+                    <td>{{personaData.apellido}}</td>
+                    <td>{{personaData.cedula}}</td>
+                    <td>{{personaData.genero.nombre}}</td>
+                    <td>{{personaData.etniaCodigo}}</td>
+                    <td>{{personaData.estudiante.nombre}}</td>
+                    <td>{{personaData.telefono}}</td>
+                    <td>{{personaData.celular}}</td>
+                    <td>{{personaData.correoPersonal}}</td>
+                    <td>{{personaData.correoEspe}}</td>
+                    <td>{{personaData.direccion}}</td>
+                    <td>{{personaData.password}}</td>
+                    <td>
+                        <input class="editIcon" type="image" src="./../../../assets/img/edit.png" [routerLink]="['/publicaciones/edit']" routerLinkActive="router-link-active" (click)="edit(personaData,crugeruserData)">
+                        <p></p>
+                        <input class="editIcon" type="image" src="./../../../assets/img/delete.png"  (click)="Borrar(personaData,crugeruserData)">
+                    </td>
+                  </tr>
+            </table>
+            <table>
+              <tr>
+                <td><b>CÉDULA</b></td>
+                <td><b>CORREOESPE</b></td>
+                <td><b>PASSWORD</b></td>
+              </tr>
+            </table>
+            <table *ngIf="crugeruserData">
+              <tr>
+                <td>{{crugeruserData.cedula}}</td>
+                <td>{{crugeruserData.correoEspe}}</td>
+                <td>{{crugeruserData.password}}</td>
+              </tr>
+            </table>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+</div>

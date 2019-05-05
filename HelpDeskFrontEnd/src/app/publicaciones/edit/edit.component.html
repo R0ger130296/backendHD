@@ -1,0 +1,104 @@
+<div class="main-content">
+    <div class="container-fluid">
+        <div class="card">
+            <div class="card-header card-header-danger">
+                <h4 class="card-title">EDITAR PERSONA</h4>
+                <p class="card-category">Help Desk</p>
+            </div>
+            <table class="table table-hover">
+                <tbody>
+                    <table>
+                        <th>
+                            Nombres
+                            <input type="text" class="form-control" name="nombre" id="nombre"
+                                [(ngModel)]="persona.nombre" placeholder="NOMBRES">
+                        </th>
+                        <th>
+                            Apellidos
+                            <input type="text" class="form-control" name="apellido" id="apellido"
+                                [(ngModel)]="persona.apellido" placeholder="APELLIDO">
+                        </th>
+                        <th>
+                            Cédula
+                            <input type="text" class="form-control" name="cedula" id="cedula"
+                                [(ngModel)]="persona.cedula" placeholder="CEDULA">
+                        </th>
+                        <th>
+                            Genero
+                            <input type="text" class="form-control" name="genero" id="genero"
+                                [(ngModel)]="persona.genero.nombre" placeholder="GENERO ">
+                        </th>
+                        <th>
+                            Etnia
+                            <input type="text" class="form-control" name="etnia" id="etnia"
+                                [(ngModel)]="persona.etniaCodigo" placeholder="ETNIA ">
+                        </th>
+                        <th>
+                            Tipo Estudiante
+                            <input type="text" class="form-control" name="estudiante" id="estudiante"
+                                [(ngModel)]="persona.estudiante.nombre" placeholder="ESTUDIANTE ">
+                        </th>
+                        <th>
+                            Telefono
+                            <input type="text" class="form-control" name="telefono" id="telefono"
+                                [(ngModel)]="persona.telefono" placeholder="TELEFONO">
+                        </th>
+                        <th>
+                            Celular
+                            <input type="text" class="form-control" name="celular" id="celular"
+                                [(ngModel)]="persona.celular" placeholder="CELULAR">
+                        </th>
+                        <th>
+                            Correo Personal
+                            <input type="text" class="form-control" name="correo personal" id="correo personal"
+                                [(ngModel)]="persona.correoPersonal" placeholder="CORREO PERSONAL">
+                        </th>
+                        <th>
+                            Correo Institucional
+                            <input type="text" class="form-control" name="correo" id="correo"
+                                [(ngModel)]="persona.correoEspe" placeholder="CORREO ESPE">
+                        </th>
+                        <th>
+                            Direccion Domicilio
+                            <input type="text" class="form-control" name="direccion" id="direccion"
+                                [(ngModel)]="persona.direccion" placeholder="DIRECCION">
+                        </th>
+                        <th>
+                            Contraseña
+                            <input type="text" class="form-control" name="contraseña" id="contraseña"
+                                [(ngModel)]="persona.password" placeholder="CONTRASEÑA">
+                        </th>
+                    </table>
+                    <table>
+                        <th>
+                            Cédula
+                            <input type="text" class="form-control" name="cedula" id="cedula"
+                                [(ngModel)]="crugeruser.cedula" placeholder="CEDULA">
+                        </th>
+                        <th>
+                            Correo
+                            <input type="text" class="form-control" name="correoespe" id="correoespe"
+                                [(ngModel)]="crugeruser.correoEspe" placeholder="CORREOESPE">
+                        </th>
+                        <th>
+                            Contraseña
+                            <input type="text" class="form-control" name="password" id="password"
+                                [(ngModel)]="crugeruser.password" placeholder="CONTRASEÑA">
+                        </th>
+                    </table>
+                    <button type="submit" class="btn btn-success" (click)="Actualizar(persona,crugeruser)"
+                        [routerLink]="['/publicaciones/list']" routerLinkActive="router-link-active">Guardar</button>
+                    <button type="button" class="btn btn-danger" [routerLink]="['/publicaciones/list']"
+                        routerLinkActive="router-link-active">Cancelar </button>
+                    <style type="text/css">
+                        option {
+                            font-family: Verdana, Arial;
+                            font-size: 12px;
+                            background-color: #e9e9e9;
+                        }
+                    </style>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
